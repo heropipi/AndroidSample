@@ -1,16 +1,16 @@
 <link href='http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css' type='text/css' rel='stylesheet' />
 <script type='text/javascript' src='http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js'></script>
 
-Toolbar 學習記錄
+Toolbar Study Report
 =====
-[重點說明](#0)<br />
-[參考文獻](#999)
+[Important](#0)<br />
+[Reference](#999)
 * * *
 
 <a name="0"/>
-## 重點說明 ##
--  設定gradle的函式庫
-	- 加入com.android.support:appcompat-v7:22.1.1
+## Important ##
+-  Setting Libary of gradle
+	- Add 'com.android.support:appcompat-v7:22.1.1'
 
 <pre class="prettyprint">
 <code>
@@ -21,10 +21,9 @@ dependencies {
 </code>
 </pre>
 
-- 設定Style
-	- 修改位於app/res/values/styles.xml
-	- 設定Style的parent屬性為"Theme.AppCompat"
-	- 將windowActionBar設定為false
+- Setting Style
+	- Fix on app/res/values/styles.xml
+	- Set "Theme.AppCompat.NoActionBar" on "parent" attribute of Style
 
 <pre class="prettyprint"><code class="language-xml">
 &lt;resources&gt;
@@ -34,9 +33,9 @@ dependencies {
 &lt;/resources&gt;
 </code></pre>
 
-- 設定Layout
-	- 於對應的Activity加入toobar, 如app/res/layoutactivity_main.xml
-	- 將minHeight屬性設定為?attr/actionBarSize
+- Setting Layout
+	- Add toolbar tag in Activity, 如app/res/layoutactivity_main.xml
+	- Set "?attr/actionBarSize" on toolbar height attribute
 
 <pre class="prettyprint"><code class="language-xml">
 &lt;android.support.v7.widget.Toolbar
@@ -45,13 +44,13 @@ dependencies {
         android:layout_height="?attr/actionBarSize" /&gt;
 </code></pre>
 
-- 繫結程式
-	- 於對應的*.java內加入內容, 如app/java/MainActivity.java
-	- 所需要引用之函式
-	- 將Activity繼承AppCompatActivity
-	- 建立一個Toolbar物件
-	- 建立一個初始化initToolbar()設定toolbar的初始參數
-	- 將此initToolbar()放置activity內的onCreate內
+- Binding code
+	- Write on *Actibity.java, 如app/java/MainActivity.java
+	- Import libary
+	- Activity extend AppCompatActivity
+	- Add a toolbar object
+	- Create a method named "initToolbar()"
+	- Call "initToolbar()" on Activity -> onCreate
 
 <pre class="prettyprint"><code class="language-java">
 import android.os.Bundle;
@@ -90,6 +89,6 @@ public class MainActivity extends AppCompatActivity
 </code></pre>
 
 <a name="999"/>
-## 參考文獻 ##
+## Reference ##
 1. [How To Make Material Design App Bar/ActionBar and Style It](http://www.android4devs.com/2014/12/how-to-make-material-design-app.html)
 2. [ANDROID – TOOLBAR STEP BY STEP](http://blog.mosil.biz/2014/10/android-toolbar/)
