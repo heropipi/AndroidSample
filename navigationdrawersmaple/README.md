@@ -1,17 +1,17 @@
 <link href='http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css' type='text/css' rel='stylesheet' />
 <script type='text/javascript' src='http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js'></script>
 
-NavigationDrawer學習記錄
+NavigationDrawer Study Report
 =====
-[重點說明](#0)<br />
-[參考文獻](#999)
+[Important](#0)<br />
+[Reference](#999)
 * * *
 
 <a name="0"/>
-## 重點說明 ##
-- 建立Toolbar並且產生NavigationDrawer之按鈕
-	- 依照ToolbarSample步驟建立Toolbar
-	- 修改MainActivity.java -> initToolbar函式
+## Important ##
+- Create a toolbar template by ToolbarSample and Fix it
+	- Follow on ToolbarSample
+	- Fix "initToolbar()" Method on MainActivity.java
 
 <pre class="prettyprint"><code class="language-java">
 private void initToolbar() {
@@ -23,8 +23,8 @@ private void initToolbar() {
 }
 </code></pre>
 
-- 設定Layout
-	- 依下Layout進行設定
+- Setting Layout
+	- Revise Layout
 
 <pre class="prettyprint"><code class="language-xml">
 &lt;android.support.v4.widget.DrawerLayout
@@ -59,15 +59,15 @@ private void initToolbar() {
 &lt;/android.support.v4.widget.DrawerLayout&gt;
 </code></pre>
 
-- 繫結程式
-	- 所需要引用之函式
-	- 建立物件
-		- 一個DrawerLayout物件
-		- 一個ListView物件, 用以顯示Drawer內容
-	- 新增Method
-		- initDrawer(), 用以初始化Drawer動作
-		- initDrwerListView(), 用以設定DrawerListView顯示之內容
-	- 將Method放入onCreate()
+- Binding code
+	- Import libary
+	- Add Object
+		- DrawerLayout object -> set drawer action
+		- ListView object -> show content of drawer open
+	- Create Method
+		- "initDrawer()" method -> init drawer action
+		- "initDrwerListView()" method -> init listview content of drawer open
+	- Call Method on Activity -> onCreate()
 
 <pre class="prettyprint"><code class="language-java">
 import android.support.v4.widget.DrawerLayout;
@@ -156,5 +156,5 @@ import android.widget.ListView;
 </code></pre>
 
 <a name="999"/>
-## 參考文獻 ##
+## Reference ##
 1. [ANDROID – TOOLBAR 上的 NAVIGATION DRAWER](http://blog.mosil.biz/2014/10/navigation-drawer-on-toolbar/)
