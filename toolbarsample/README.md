@@ -47,39 +47,46 @@ dependencies {
 
 - 繫結程式
 	- 於對應的*.java內加入內容, 如app/java/MainActivity.java
-	- 加入需要引用之函式
+	- 所需要引用之函式
 	- 將Activity繼承AppCompatActivity
 	- 建立一個Toolbar物件
 	- 建立一個初始化initToolbar()設定toolbar的初始參數
 	- 將此initToolbar()放置activity內的onCreate內
 
 <pre class="prettyprint"><code class="language-java">
+import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 </code></pre>
 
 <pre class="prettyprint"><code class="language-java">
 public class MainActivity extends AppCompatActivity
 </code></pre>
 <pre class="prettyprint"><code class="language-java">
-private Toolbar mToolbar;
+    private Toolbar mToolbar;
 </code></pre>
 <pre class="prettyprint"><code class="language-java">
-private void initToolbar() {
-	mToolbar = (Toolbar) findViewById(R.id.tool_bar);// bind in code
-	mToolbar.setLogo(R.mipmap.ic_launcher);// Set toolbar Logo
-	mToolbar.setTitle("Your Title");// Set toolbar title
-	setSupportActionBar(mToolbar);// Set toolbar to Activity
-	//getSupportActionBar().setDisplayHomeAsUpEnabled(true);// Enable drawer button
-}
+    /**
+     * Initialize Toolbar
+     */
+    private void initToolbar() {
+        mToolbar = (Toolbar) findViewById(R.id.tool_bar);// bind in code
+        mToolbar.setLogo(R.mipmap.ic_launcher);// Set toolbar Logo
+        mToolbar.setTitle("Your Title");// Set toolbar title
+        setSupportActionBar(mToolbar);// Set toolbar to Activity
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);// Enable drawer button
+    }
 </code></pre>
 <pre class="prettyprint"><code class="language-java">
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-	super.onCreate(savedInstanceState);
-	setContentView(R.layout.activity_main);
-	initToolbar();
-}
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        initToolbar();
+    }
 </code></pre>
 
 <a name="999"/>
