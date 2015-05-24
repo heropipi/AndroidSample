@@ -1,4 +1,4 @@
-Android學習記錄 
+Android Study Report
 ====
-- 2015.05.24 新增NavigationDrawerSmaple
-- 2015.05.24 新增ToolbarSample
+- 2015.05.24 Add NavigationDrawerSmaple
+- 2015.05.24 Add ToolbarSample
