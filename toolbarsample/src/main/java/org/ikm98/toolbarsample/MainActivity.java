@@ -8,16 +8,8 @@ import android.view.MenuItem;
 
 
 public class MainActivity extends AppCompatActivity {
+
     private Toolbar mToolbar;
-
-    private void initToolbar() {
-        mToolbar = (Toolbar) findViewById(R.id.tool_bar);// bind in code
-        mToolbar.setLogo(R.mipmap.ic_launcher);// Set toolbar Logo
-        mToolbar.setTitle("Your Title");// Set toolbar title
-        setSupportActionBar(mToolbar);// Set toolbar to Activity
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);// Enable drawer button
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,5 +39,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Initialize Toolbar
+     */
+    private void initToolbar() {
+        mToolbar = (Toolbar) findViewById(R.id.tool_bar);// bind in code
+        mToolbar.setLogo(R.mipmap.ic_launcher);// Set toolbar Logo
+        mToolbar.setTitle("Your Title");// Set toolbar title
+        setSupportActionBar(mToolbar);// Set toolbar to Activity
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);// Enable drawer button
     }
 }

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">NavigationDrawerSmaple</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="open_left_drawer">Open Drawer</string>
+    <string name="close_left_drawer">Close Drawer</string>
+
+    <string name="list_one">List 1</string>
+    <string name="list_two">List 2</string>
+    <string name="list_three">List 3</string>
+
+    <string-array name="menu_string_list">
+        <item>@string/list_one</item>
+        <item>@string/list_two</item>
+        <item>@string/list_two</item>
+    </string-array>
+</resources>
